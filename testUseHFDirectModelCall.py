@@ -6,6 +6,6 @@ model = AutoModel.from_pretrained("bert-base-uncased")
 
 inputs = tokenizer(inputText, return_tensors="pt")
 
-outputs = model(**inputs)
+outputs = model(**inputs) #Best for model fine-tuning, research, or developing custom pipelines.
 
 print(outputs.last_hidden_state.shape)
